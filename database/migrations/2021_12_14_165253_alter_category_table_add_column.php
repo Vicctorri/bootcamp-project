@@ -3,8 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
-class CreateCategoryTable extends Migration
+class AlterCategoryTableAddColumn extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +14,10 @@ class CreateCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('category', function (Blueprint $table) {
-            $table->id();
-            $table->string('name', 30);
-            $table->text('description');
-        });
+        DB::statement("
+        ALTER TABLE category
+        ADD COLUMN feedback varchar(100);
+        ");
     }
 
     /**
@@ -27,6 +27,9 @@ class CreateCategoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category');
+        DB::statement("
+        ALTER TABLE category
+        DROP COLUMN feedback;
+        ");
     }
 }

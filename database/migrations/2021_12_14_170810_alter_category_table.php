@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoryTable extends Migration
+class AlterCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('category', function (Blueprint $table) {
-            $table->id();
-            $table->string('name', 30);
-            $table->text('description');
+        Schema::table('category', function (Blueprint $table){
+            $table->unique('name','category_name_unique');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateCategoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category');
+        Schema::table('category', function (Blueprint $table){
+            $table->dropUnique('category_name_unique');
+        });
     }
 }
