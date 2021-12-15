@@ -16,11 +16,11 @@ class CreateBorrowsTable extends Migration
         Schema::create('borrows', function (Blueprint $table) {
             $table->id();
             $table->foreignId('book_id')->constrained('books')
-                ->onDelete('CASCADE')
+                ->onDelete('RESTRICT')
                 ->onUpdate('CASCADE');
             $table->foreignId('client_id')->constrained('clients')
-                ->onDelete('CASCADE')
-                ->onUpdate('RESTRICT');
+                ->onDelete('RESTRICT')
+                ->onUpdate('CASCADE');
             $table->date('taken_date');
             $table->date('brought_date');
         });
