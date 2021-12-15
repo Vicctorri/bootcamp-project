@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BlogController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +30,5 @@ Route::get('/', function () {
 
 Route::get('/contact', [ContactController::class, 'showContact'])->name('showContact');
 
+Route::get('/layout', [HomeController::class, 'index']);
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
