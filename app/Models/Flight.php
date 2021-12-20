@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Flight extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'destination',
+        'departure'
+    ];
+
+    protected $attributes = [
+        'departure' => 'Chisinau',
+    ];
 }
