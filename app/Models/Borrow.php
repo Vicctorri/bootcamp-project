@@ -15,4 +15,12 @@ class Borrow extends Model
         'taken_date',
         'brought_date'
     ];
+
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
+
+    public function book(){
+        return $this->belongsTo(Book::class);
+    }
 }

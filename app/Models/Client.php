@@ -19,4 +19,14 @@ class Client extends Model
         'email',
         'phone'
     ];
+
+    public function jobs()
+    {
+        return $this->hasOne(Job::class);
+    }
+
+    public function borrows()
+    {
+        return $this->hasMany(Borrow::class);
+    }
 }

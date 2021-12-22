@@ -13,4 +13,8 @@ class Job extends Model
         'id_client',
         'name'
     ];
+
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 }
