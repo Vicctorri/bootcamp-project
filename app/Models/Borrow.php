@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
+class Borrow extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'category_id',
-        'title',
-        'page_count',
-        'edition',
-        'volume',
-        'description'
+        'book_id',
+        'client_id',
+        'taken_date',
+        'brought_date'
     ];
 }
