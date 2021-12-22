@@ -10,7 +10,7 @@
                   <p>The software helps to manage the entire library operations from maintaining book records to issue a book.
                     So, it is easier to search for books and find the right materials for students and the librarian.</p>
                     <p> Here you can always find the relevant information on the available domains for your region.
-                      We strongly recommend creating an account in our library so the system can automatically match the available domain for you. a</p>
+                      We strongly recommend creating an account in our library so the system can automatically match the available domain for you.</p>
                       <a href="{{route('login')}}" class="btn btn-outline-primary p-3 mb-md-5 fw-bold">SIGN IN</a>
                 </div>  
               <div class="col-md-4 pt-5 rounded float-end align-content-right img-fluid mt-5 pl-5" >
