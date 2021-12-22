@@ -4,7 +4,8 @@
                   <div class="card-body">
                     <h4 class="card-title fw-bold ">Veronika decides to die</h4>
                     <p class="card-text">{{$article->excerpt}}</p>
-                    <a href="book_page.html" class="btt1 btn">Goo</a>
+                    <a href="{{route('blogArticle', ['id'=> $article -> id ]) }}" 
+                    class="btt1 btn">Goo</a>
                   </div>
                 </div>
               </div>

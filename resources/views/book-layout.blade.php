@@ -18,7 +18,7 @@
 
 </head>
     <body class="antialiased">
-        @include('header')
+        @include('book-header')
         @yield('content')
         @include('footer')
    
