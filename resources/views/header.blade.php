@@ -15,7 +15,7 @@
               <a class="nav-link" href="{{route('contact')}}">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('blog')}}">Books</a>
+              <a class="nav-link" href="{{route('books')}}">Books</a>
             </li>
           </ul>
         </div>

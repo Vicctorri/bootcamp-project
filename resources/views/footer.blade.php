@@ -29,10 +29,10 @@
                 <a href="{{ route('contact') }}" class="text-reset">Contact</a>
               </p>
               <p>
-                <a href="books.html" class="text-reset">Books</a>
+                <a href="{{route('books')}}" class="text-reset">Books</a>
               </p>
               <p>
-                <a href="book_page.html" class="text-reset">Book page</a>
+                <a href="{{route('book_page')}}" class="text-reset">Book page</a>
               </p>
             </div>
 
@@ -47,13 +47,13 @@
                 <a href="{{ route('register') }}" class="text-reset">Register</a>
               </p>
               <p>
-                <a href="blog.html" class="text-reset">Blog</a>
+                <a href="{{route('blog')}}" class="text-reset">Blog</a>
               </p>
               <p>
                 <a href="news.html" class="text-reset">News</a>
               </p>
               <p>
-                <a href="useful-advice.html" class="text-reset">Useful Advice</a>
+                <a href="{{route('useful_advice')}}" class="text-reset">Useful Advice</a>
               </p>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
