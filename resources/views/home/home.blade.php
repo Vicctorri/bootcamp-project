@@ -28,7 +28,7 @@
       320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
   </div>
   <section class="companies">
-    <h3 class="my-2 fw-bold text-center">Partnerships</h3>
+    <h3 class="my-2 fw-bold text-center mb-5">Partnerships</h3>
     <div class="container text-center">
       <div class="row g-5">
         <div class="col-md-2"><img src="{{asset('./assets/img/1.png')}}" alt="Company logo" class="img-fluid"></div>

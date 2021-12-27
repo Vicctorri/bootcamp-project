@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index(){
 
-        Article::select([
+       /* Article::select([
             'id',
             'title',
             'published_at',
@@ -37,10 +37,6 @@ class HomeController extends Controller
         ])
             ->join('blog_categories', 'blog_categories.id', '=', 'articles.category_id')
             ->where('name', '=', 'Life and Style')->get();
-        
-
-
-
 
         Article::select([
             'id', 
@@ -57,8 +53,7 @@ class HomeController extends Controller
             'title', 
             'published_at',
             'category', 
-        ])
-
+        ]) */
 
         return view('home.home');
     }

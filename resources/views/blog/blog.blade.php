@@ -256,76 +256,26 @@
                   </div>
                 </div>
               </div>
-              
             </div> 
             <button class="btt1 button-blog mt-3 mx-5" style="width: 180px;">Filter</button>
-          </div>
+            </div>
 
-          <div class="col-md-9">
-            <div class="row">
-            @foreach($articles as $article)
-                <div class="col">
-                @include('blog.article', ['article => $article'])
-                </div>
-              @endforeach
-              <div class="col-4">
-                <div class="book-card">
-                  <img src="img/b2.jpg" class="card-img-top mx-4" alt="...">
-                  <div class="card-body">
-                    <h4 class="card-title">Atomic Habits</h4>
-                    <p class="card-text">James Clear</p>
-                    <a href="#" class="btt1 btn">Goo</a>
+            <div class="col-md-9">
+              <div class="row">
+              @foreach($articles as $article)
+                  <div class="col">
+                  @include('blog.article', ['article => $article'])
                   </div>
-                </div>
+                @endforeach
               </div>
-              <div class="col-4">
-                <div class="book-card">
-                  <img src="img/b1.jpg" class="card-img-top mx-4" alt="...">
-                  <div class="card-body">
-                    <h4 class="card-title">Habits of a Happy Brain</h4>
-                    <p class="card-text">Loretta Graziano Breuning</p>
-                    <a href="#" class="btt1 btn ">Goo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="book-card">
-                  <img src="img/b.jpg" class="card-img-top mx-4" alt="...">
-                  <div class="card-body">
-                    <h4 class="card-title">Veronika decides to die</h4>
-                    <p class="card-text">Paulo Coelho</p>
-                    <a href="#" class="btt1 btn ">Goo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="book-card">
-                  <img src="img/b.jpg" class="card-img-top mx-4" alt="...">
-                  <div class="card-body">
-                    <h4 class="card-title">Veronika decides to die</h4>
-                    <p class="card-text">Paulo Coelho</p>
-                    <a href="#" class="btt1 btn ">Goo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="book-card">
-                  <img src="img/b.jpg" class="card-img-top mx-4" alt="...">
-                  <div class="card-body">
-                    <h4 class="card-title">Veronika decides to die</h4>
-                    <p class="card-text">Paulo Coelho</p>
-                    <a href="#" class="btt1 btn">Goo</a>
-                  </div>
-                </div>
+              <div class="mt-5">
+              {{ $articles->links() }}
               </div>
             </div>
-           
           </div>
         </div>
       </div>
-
-    </div>
-  </main>
+    </main>
             
 
 @endsection
