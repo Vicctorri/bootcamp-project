@@ -49,7 +49,7 @@
             <p  class="px-5 pb-5" >Watch out for dirty kitchen tables! 
             </p>
         </div>
-        <div class="col-md-12 shadow bg-light mt-5 mb-5">
+        <div class="col-md-12 shadow bg-light p-3">
             <p class="text-center pt-3 fw-bold">6. If something does happen to the book, offer to replace it. </p>
             <p  class="px-5 pb-5" >Accidents happen, but the right thing to do is take responsibility. 
             </p>
