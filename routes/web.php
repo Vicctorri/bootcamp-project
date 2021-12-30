@@ -12,6 +12,8 @@ use App\Http\Controllers\BookPageController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\UsefulAdviceController;
+use App\Http\Controllers\CartController;
+
 
 
 /*
@@ -45,4 +47,5 @@ Route::get('/blog/article/{id}', [ArticleController::class, 'show'])->name('blog
 Route::get('/books', [BooksController::class, 'index'])->name('books');
 Route::get('/books/book_page', [BookPageController::class, 'index'])->name('book_page');
 Route::get('/books/useful_advice', [UsefulAdviceController::class, 'index'])->name('useful_advice');
+Route::get('/books/cart', [CartController::class, 'index'])->name('cart');
 
