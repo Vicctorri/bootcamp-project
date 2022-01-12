@@ -15,10 +15,6 @@ class ContactController extends Controller
 
     public function send(ContactRequest $request):RedirectResponse
     {
-        $callback = function (string $test): string{
-            return "{$test} input";
-        };
-
 
         $data = $request->validated();
         \Log::debug( 'test', $data);
@@ -35,8 +31,8 @@ class ContactController extends Controller
         
         function(Message $message) use ($data){ 
             $message->subject('mesage from ' . $data['email']);
-            $message->to('tech@baloon.app');
-            $message->from('no-reply@baloon.app', 'Balon M');
+            $message->to('library@gmail.com');
+            $message->from('no-reply@library.app', 'ViLibrary');
         
 
         });
