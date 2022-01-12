@@ -16,12 +16,12 @@ class ContactRequest extends FormRequest
     public function rules(): array
     {
         return[
-            'firstname' => ['min:2', 'required', 'string'],
-            'lastname' => ['min:2', 'required', 'string'],
-            'email' => ['string', 'email', 'required'],
-            'phonenumber' => ['min:10', 'required', 'string'],
-            'subject' => ['min:2', 'required', 'string'],
-            'message' => ['min:12', 'required', 'string']
+            'firstname' => ['required', 'string', 'min:2'],
+            'lastname' => ['required', 'string', 'min:2'],
+            'email' => ['required', 'string', 'email'],
+            'phonenumber' => ['required', 'string', 'min:10'],
+            'subject' => ['required', 'string', 'min:2'],
+            'message' => ['required', 'string', 'min:12']
         ];
     }
 }
