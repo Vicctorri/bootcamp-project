@@ -28,4 +28,12 @@ class Article extends Model
     public  function blogTags(){
         return $this->belongsToMany(BlogTag::class);
     }
+
+    public  function author(){
+        return $this->belongsToMany(User::class, 'authot_id');
+    }
+
+    public  function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }

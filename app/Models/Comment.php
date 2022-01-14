@@ -14,4 +14,8 @@ class Comment extends Model
         'mesage',
 
     ];
+
+    public  function article(){
+        return $this->belongsTo(Article::class);
+    }
 }
