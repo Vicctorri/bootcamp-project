@@ -20,7 +20,7 @@ class ContactRequest extends FormRequest
             'lastname' => ['required', 'string', 'min:2'],
             'email' => ['required', 'string', 'email'],
             'phonenumber' => ['required', 'string', 'min:10'],
-            'subject' => ['required', 'string', 'min:2'],
+            'subject' => ['required', 'string', 'min:1', 'in:education,computers,business,science,social,study'],
             'message' => ['required', 'string', 'min:12']
         ];
     }
