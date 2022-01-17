@@ -30,7 +30,16 @@
                   </div>
                   <div class="mb-3">
                       <label class="form-label" >Subjet</label>
-                      <input type="text" value="{{ old('subject') }}"  class="form-control" placeholder="Subject" name="subject">
+                      <select id="subject" class="form-control" name="subject">
+                        <option value="">Select the subject</option>
+                        <option value="education" >Education</option>
+                        <option value="computers" >Computers</option>
+                        <option value="business" >Business</option>
+                        <option value="science" >Science & Technology</option>
+                        <option value="social" >Social Sciences</option>
+                        <option value="study" >Study Aids & Test Prep</option>
+                    </select>
+                      {{-- <input type="text" value="{{ old('subject') }}"  class="form-control" placeholder="Subject" name="subject"> --}}
                   </div>
                   <div class="mb-3">
                       <label class="form-label" >Message</label>
