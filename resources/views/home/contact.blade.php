@@ -39,7 +39,6 @@
                         <option value="social" >Social Sciences</option>
                         <option value="study" >Study Aids & Test Prep</option>
                     </select>
-                      {{-- <input type="text" value="{{ old('subject') }}"  class="form-control" placeholder="Subject" name="subject"> --}}
                   </div>
                   <div class="mb-3">
                       <label class="form-label" >Message</label>
