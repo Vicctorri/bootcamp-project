@@ -38,7 +38,7 @@ class ContactUsMailer
         }
 
     );
-    $this->logger->info('conttt info ');
+    $this->logger->info('Contact Us mail send to library@gmail.com');
     }
 
 
