@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Services\RequestActivityLoggerInterface;
 use Closure;
 use App\Services\DummyRequestActivityLogger;
 
@@ -12,7 +13,7 @@ class LogActivityMiddleware
 
     private DummyRequestActivityLogger  $logger;
 
-    public function __construct(DummyRequestActivityLogger $logger)
+    public function __construct(RequestActivityLoggerInterface $logger)
     {
         $this -> logger = $logger;
     }
