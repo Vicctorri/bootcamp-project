@@ -16,8 +16,12 @@ class ArticleController extends Controller
         $userRepresentation = $user ? "User with id {$user->id}" : "Unknown User";
         $logger->info(
             $userRepresentation . ' accessed ' . "article with id {$articleId}",
-            ['id' => $articleId, 'title' => $article->title],
-        );
+                ['id' => $articleId,
+                'title' => $article->title,
+                'author_id'=>$article->author_id,
+                'seo_title'=>$article->seo_title,
+                'published_at'=>$article->published_at,
+                ]);
 
         return view('article.article', ['article' => $article]);
     }
