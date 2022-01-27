@@ -32,5 +32,17 @@ class Book extends Model
         return $this->belongsToMany(Author::class);
     }
 
+    public function getData(): array
+    {
+        return [
+            'category_id'=> $this->category_id,
+            'title' => $this->title,
+            'page_count' => $this->page_count,
+            'edition' => $this->edition,
+            'volume' => $this->volume,
+            'description' => $this->descroption,
+        ];
+    }
+
 
 }

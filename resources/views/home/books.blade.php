@@ -19,88 +19,87 @@
                   </h2>
                   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                     <div class="accordion-body">
-                      
+
                       <form>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Autobiography
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Business/economics
                           </span>
-                        </label>  
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Dictionary
                           </span>
-                        </label>  
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Health/fitness
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Philosophy
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Science
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Young adult
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Romance
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Math
                           </span>
-                        </label> 
+                        </label>
                       </form>
                       <label class="form-check">
                         <input class="form-check-input" type="checkbox" value="">
                         <span class="form-check-label">
                           Romance
                         </span>
-                      </label> 
+                      </label>
                       <label class="form-check">
                         <input class="form-check-input" type="checkbox" value="">
                         <span class="form-check-label">
                           Math
                         </span>
-                      </label> 
-                    </form>
-                    <label class="form-check">
+                      </label>
+                        <label class="form-check">
                       <input class="form-check-input" type="checkbox" value="">
                       <span class="form-check-label">
                         Romance
                       </span>
-                    </label> 
+                    </label>
                     <label class="form-check">
                       <input class="form-check-input" type="checkbox" value="">
                       <span class="form-check-label">
                         Math
                       </span>
-                    </label> 
+                    </label>
                   </form>
 
                     </div>
@@ -128,7 +127,7 @@
                             Available
                           </span>
                         </label>
-                        </div> 
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -147,49 +146,49 @@
                           <span class="form-check-label">
                             Osho
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Paulo Coelho
                           </span>
-                        </label>  
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Bob Olson
                           </span>
-                        </label>  
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Garth Stein
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Juan Arias
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Juan Arias
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Juan Arias
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Juan Arias
                           </span>
-                        </label> 
+                        </label>
                       </form>
                     </div>
                   </div>
@@ -208,55 +207,55 @@
                           <span class="form-check-label">
                             Osho
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Paulo Coelho
                           </span>
-                        </label>  
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Bob Olson
                           </span>
-                        </label>  
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Garth Stein
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Juan Arias
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Juan Arias
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Juan Arias
                           </span>
-                        </label> 
+                        </label>
                         <label class="form-check">
                           <input class="form-check-input" type="checkbox" value="">
                           <span class="form-check-label">
                             Juan Arias
                           </span>
-                        </label> 
+                        </label>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
             <button class="btt1 button-blog mt-3 mx-5 mb-5" style="width: 180px;">Filter</button>
             </div>
             <div class="col-md-9">
@@ -265,18 +264,18 @@
                         <div class="book-card">
                         <img src="{{asset('./assets/img/b1.jpg')}}" class="card-img-top mx-4" alt="...">
                         <div class="card-body">
-                            <h4 class="card-title">Habits of a Happy Brain</h4>
+                            <h4 class="card-title">{{$book-> title}}</h4>
                             <p class="card-text">Loretta Graziano Breuning</p>
                             <a href="{{route('book_page')}}" class="btt1 btn ">View</a>
                         </div>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
     </div>
 </main>
-            
+
 
 @endsection
