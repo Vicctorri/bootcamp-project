@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static findOrFail($bookId)
+ */
 class Book extends Model
 {
     use HasFactory;
@@ -17,6 +20,7 @@ class Book extends Model
         'volume',
         'description'
     ];
+
 
     public function borrows()
     {
@@ -31,10 +35,15 @@ class Book extends Model
     {
         return $this->belongsToMany(Author::class);
     }
+    public function convertToLoggableString(): string
+    {
+        return "Article with id {$this->bookId}";
+    }
 
     public function getData(): array
     {
         return [
+            'id' => $this->bookId,
             'category_id'=> $this->category_id,
             'title' => $this->title,
             'page_count' => $this->page_count,
