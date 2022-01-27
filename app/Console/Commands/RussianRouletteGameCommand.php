@@ -44,23 +44,28 @@ class RussianRouletteGameCommand extends Command
      */
     public function handle()
     {
-        $user = rand(1,6);
-        $win= rand(1,6);
-        $winstatistic= array();
-        $losestatistic = array();
+        $bullet = rand(1,6);
+        $player = rand(1,6);
+        $winstatistic = $this->cacheRepository->get('Winners', []);
+        $losestatistic = $this->cacheRepository->get('Lossers', []);
 
-        $this->info("User: " . $user);
-        $this->info("Winner bullet: " .$win);
+        $this->info("Bullet: " . $bullet);
+        $this->info("Player: " .$player);
 
+        $winstatistic[$player] = $winstatistic[$player] ?? 0;
+        $losestatistic[$player] = $losestatistic[$player] ?? 0;
 
-        if($user=== $win)
+        if($bullet=== $player)
         {
             $this->info("You are winner!");
-            $winstatistic++;
+            $winstatistic[$player]++;
         }else {
             $this->info("You are losser!");
-            $losestatistic++;
-        }
+            $losestatistic[$player]++;
+        };
+
+        $this->cacheRepository->set('winners', $winstatistic);
+        $this->cacheRepository->set('lossers', $losestatistic);
 
 
     }
