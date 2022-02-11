@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactTestController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LoginController;
@@ -51,6 +50,7 @@ Route::get('/books/useful_advice', [UsefulAdviceController::class, 'index'])->na
 Route::get('/books/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/books/favorites', [FavoriteController::class, 'index'])->name('favorite');
 
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send')
+    ->middleware('log.activity:sendContact');
 
 
