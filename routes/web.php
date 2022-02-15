@@ -53,4 +53,6 @@ Route::get('/books/favorites', [FavoriteController::class, 'index'])->name('favo
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send')
     ->middleware('log.activity:sendContact');
 
+Route::put('api/articles/{articleId}', [ArticleController::class, 'update'])->name('articles.put');
+
 
