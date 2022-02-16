@@ -17,6 +17,6 @@ mix.js('resources/js/app.js', 'public/assets/js')
     ]);
 
 mix.js('resources/blog/js/blog.js', 'public/assets/blog/js')
-    .postCss('resources/blog/css/blog.css', 'public/assets/blog/css', [
-        //
-    ]);
+    .postCss('resources/blog/css/blog.css', 'public/assets/blog/css');
+
+

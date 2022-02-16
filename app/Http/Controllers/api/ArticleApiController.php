@@ -41,7 +41,7 @@ class ArticleApiController extends Controller
             $articlesArray[] = [
                 'id' => $article->id,
                 'title' => $article->title,
-                'description' => $article->desription,
+                'excerpt' => $article->excerpt,
                 'view_count' => $article->view_count,
             ];
         }

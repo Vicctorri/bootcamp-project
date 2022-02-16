@@ -445,14 +445,14 @@ tbody{
 
 /* Blog */
 .blog .image {
-    height: 250px;
+    height: 100%;
     overflow: hidden;
     border-radius: 3px 0 0 3px;
 }
 
 .blog .image img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .blog .date {
