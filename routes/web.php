@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ArticleApiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
@@ -53,4 +54,8 @@ Route::get('/books/favorites', [FavoriteController::class, 'index'])->name('favo
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send')
     ->middleware('log.activity:sendContact');
 
-
+Route::get('/api/articles/most-popular',  [ArticleApiController::class, 'readMostPopularArticles']);
+Route::get('/api/articles',  [ArticleApiController::class, 'readAllArticles']);
+Route::get('/api/articles/{id}',  [ArticleApiController::class, 'readOneArticle']);
+Route::delete('/api/articles/{id}',  [ArticleApiController::class, 'deleteArticle']);
+Route::post('/api/articles/',  [ArticleApiController::class, 'createArticle']);
