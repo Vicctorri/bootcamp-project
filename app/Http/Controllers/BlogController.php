@@ -18,12 +18,12 @@ class BlogController extends Controller
         $categories = BlogCategory::all();
         $category = $request['category'] ?? $categories->first()->id;
 
-        $articles = Article::orderBy('created_at', $sort)->paginate(6);
+        $articles = Article::orderBy('created_at', $sort)->paginate(5);
         $articles ->  appends(['sort' => $sort]);
 
 
         return view('blog.blog', [
-            'articles'=>$articles, 
+            'articles'=>$articles,
             'categories' => $categories,
             'filter' => [
                 'sort' => $sort,

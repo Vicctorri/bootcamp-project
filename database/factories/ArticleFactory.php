@@ -2,21 +2,6 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\User;
-use App\Models\BlogCategory;
-
-class ArticleFactory extends Factory
-{
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
-    <?php
-
-namespace Database\Factories;
-
 use App\Models\BlogCategory;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;

@@ -12,8 +12,15 @@ var listOfArticles = document.querySelector('[articles-list]');
 axios.get('/api/articles/most-popular').then(function (_ref) {
   var data = _ref.data;
   data.forEach(function (articleItem) {
+    console.log(articleItem);
     var article = popularArticleTemplate.content.cloneNode(true).children[0];
-    article.querySelector('[data-title]').textContent = articleItem.title; // article.querySelector('[data-excerpt]').textContent = articleItem.excerpt;
+    var articleTitle = article.querySelector('[data-title]');
+    var titleLink = document.createElement('a');
+    titleLink.href = "/blog/article/".concat(articleItem.id);
+    titleLink.textContent = articleItem.title;
+    articleTitle.append(titleLink);
+    article.querySelector('[data-image]').style.backgroundImage = "url(".concat(articleItem.image_url, ")"); // article.querySelector('[data-image]').innerHTML = `url(${articleItem.image})`;
+    // article.querySelector('[data-excerpt]').textContent = articleItem.excerpt;
 
     var counterElement = article.querySelector('[data-views-counter]');
     counterElement.innerHTML = "\n            ".concat(articleItem.view_count, "\n            <span class=\"visually-hidden\">unread messages</span>\n        ");

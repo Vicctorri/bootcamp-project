@@ -31,9 +31,6 @@
               <p>
                 <a href="{{route('books')}}" class="text-reset">Books</a>
               </p>
-              <p>
-                <a href="{{route('book_page')}}" class="text-reset">Book page</a>
-              </p>
             </div>
 
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -50,9 +47,6 @@
                 <a href="{{route('blog')}}" class="text-reset">Blog</a>
               </p>
               <p>
-                <a href="news.html" class="text-reset">News</a>
-              </p>
-              <p>
                 <a href="{{route('useful_advice')}}" class="text-reset">Useful Advice</a>
               </p>
             </div>
@@ -60,9 +54,10 @@
               <img src="https://i0.wp.com/www.cssscript.com/wp-content/uploads/2018/03/Simple-Location-Picker.png?fit=561%2C421&ssl=1" alt="Lamp" width="390" height="290">
             </div>
         </div>
+        </div>
       </section>
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05); color: white;">
-        © 2021 Copyright:
+        © 2022 Copyright:
         <a class="text-reset fw-bold" href="index.html">ViLibrary</a>
       </div>
     </footer>

@@ -51,6 +51,9 @@
                             @include('blog/popular-articles')
                         </div>
                     </div>
+                    <div class="pt-3">{{ $articles->links() }}
+                    </div>
+
                 </div>
           </div>
         </div>
