@@ -22,7 +22,6 @@ body{
     margin-top: 4rem;
     font-size: 1.95rem;
     color: white;
-
 }
 
 .lang-menu{
@@ -300,10 +299,10 @@ img{
     width: 100px;
 
 }
-
-.contact-page{
-    padding-top: 150px;
+.nav-item{
+    list-style: none;
 }
+
 
 .contact-page h2{
     color: #231d27;

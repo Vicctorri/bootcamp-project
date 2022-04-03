@@ -12,16 +12,16 @@
                     <p> Here you can always find the relevant information on the available domains for your region.
                       We strongly recommend creating an account in our library so the system can automatically match the available domain for you.</p>
                       <a href="{{route('login')}}" class="btn btn-outline-primary p-3 mb-md-5 fw-bold">SIGN IN</a>
-                </div>  
+                </div>
               <div class="col-md-4 pt-5 rounded float-end align-content-right img-fluid mt-5 pl-5" >
                 <img  class="img1"  src="{{asset('./assets/img/book4.jpg')}}"  alt="header img">
-               
+
               </div>
           </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 1440 320"><path fill="#fff" 
-      fill-opacity="1" 
+      <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"><path fill="#fff"
+      fill-opacity="1"
       d="M0,256L48,261.3C96,267,192,277,288,282.7C384,288,480,288,576,250.7C672,213,768,
       139,864,133.3C960,128,1056,192,1152,229.3C1248,267,1344,277,1392,282.7L1440,288L1440,
       320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,
@@ -42,7 +42,7 @@
 
   </section>
   <section class="feature gradient">
-    <svg xmlns="http://www.w3.org/2000/svg" 
+    <svg xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,106.7C384,107,480,149,576,154.7C672,160,768,128,864,112C960,96,1056,96,1152,101.3C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
     <div class="container-fluid">
       <div class="row">
@@ -73,18 +73,18 @@
         <div class="about-index col shadow-sm ">
           <h1 class="my-2 ali mx-lg-4 fw-bold text-center">About</h1>
           <p id="about"  class="my-4">ViLibrary is a real support for personal development and research, serving the interests of information, study, reading, education and recreation of users.</p>
-          <p>The mission of the library is to perform informational and educational functions by continuously updating collections of documents in print and electronic format, providing complex services and products, 
+          <p>The mission of the library is to perform informational and educational functions by continuously updating collections of documents in print and electronic format, providing complex services and products,
             facilitating access to documentary resources, deepening the culture of information of users.</p>
             <a href="{{route('about')}}" class="btn btn-outline-secondary btn-lg"> More...</a>
         </div>
 
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 1440 320"><path fill="#fff" 
+    <svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"><path fill="#fff"
     fill-opacity="1" d="M0,256L48,266.7C96,277,192,299,288,293.3C384,288,480,256,576,224C672,192,768,160,864,154.7C960,149,1056,171,1152,181.3C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
-  </section>
+</section>
   <section id="contact">
     <div class="container">
         <div class="row">
@@ -95,7 +95,7 @@
             <div class="row">
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="itd_circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    <svg xmlns="http://www.w3.org/2000/svg"
                     width="26" height="26" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16">
                     <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
                   </svg>
@@ -112,8 +112,8 @@
                     <h5 class="text-center">0222005233</h5>
                     <div class="line">
                     </div>
-            </div>        
-          
+            </div>
+
             <div class="col-xl-4 col-md-6 col-sm-12">
               <div class="itd_circle"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                   <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
@@ -131,7 +131,7 @@
                     <h5 class="text-center">ViLibrary</h5>
                     <div class="line">
                     </div>
-            </div>        
+            </div>
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="itd_circle"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                   <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
@@ -155,8 +155,8 @@
             </section>
         </div>
   </main>
- 
- 
+
+
 </body>
 
 @endsection

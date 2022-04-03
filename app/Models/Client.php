@@ -20,6 +20,8 @@ class Client extends Model
         'phone'
     ];
 
+    public $timestamps = false;
+
     public function jobs()
     {
         return $this->hasOne(Job::class);

@@ -43,7 +43,6 @@ class ArticleApiController extends Controller
                 'title' => $article->title,
                 'excerpt' => $article->excerpt,
                 'view_count' => $article->view_count,
-                'image_url' => $article->image_url,
             ];
         }
 

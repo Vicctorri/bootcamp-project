@@ -19,7 +19,7 @@ body{
 }
 
 .page-header{
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
     font-size: 1.95rem;
     color: white;
 
@@ -301,9 +301,6 @@ img{
 
 }
 
-.contact-page{
-    padding-top: 150px;
-}
 
 .contact-page h2{
     color: #231d27;

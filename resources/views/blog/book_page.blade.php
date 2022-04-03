@@ -31,11 +31,10 @@
             <div class="book-info " >
                 <h1>{{$book->title}}</h1>
                 <p>{{$book->author}}</p>
-                <div class="mx-5 p-3">Description</div>
                 <div class="bg-gray-100 shadow-sm">
                     <p>{{$book->description}}</p>
                 </div>
-                <button class="btn btt1 mt-5" >Add to cart</button>
+                <button class="add-cart btn btt1 mt-5" >Add to cart</button>
             </div>
             <a class="favorite" href="#">
               <span class="icon mt-5">

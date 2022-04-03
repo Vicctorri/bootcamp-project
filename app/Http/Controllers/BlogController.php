@@ -18,7 +18,7 @@ class BlogController extends Controller
         $categories = BlogCategory::all();
         $category = $request['category'] ?? $categories->first()->id;
 
-        $articles = Article::orderBy('created_at', $sort)->paginate(5);
+        $articles = Article::orderBy('created_at', $sort)->paginate(4);
         $articles ->  appends(['sort' => $sort]);
 
 

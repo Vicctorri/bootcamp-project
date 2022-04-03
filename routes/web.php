@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\api\ArticleApiController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\oldHomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -33,15 +33,7 @@ Route::get('/', function () {
 });
 
 
-//Route::get('/contact', 'ContactController@showContact');
-//Route::get('/testcontact', [ContactTestController::class, 'showContact'])->name('showContact');
-
-//Library
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/books/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/blog/article/{id}', [ArticleController::class, 'show'])->name('blogArticle');
@@ -60,3 +52,9 @@ Route::get('/api/articles',  [ArticleApiController::class, 'readAllArticles']);
 Route::get('/api/articles/{id}',  [ArticleApiController::class, 'readOneArticle']);
 Route::delete('/api/articles/{id}',  [ArticleApiController::class, 'deleteArticle']);
 Route::post('/api/articles/',  [ArticleApiController::class, 'createArticle']);
+
+//Route::get('/home', [App\Http\Controllers\oldHomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

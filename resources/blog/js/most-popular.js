@@ -12,10 +12,8 @@ axios.get('/api/articles/most-popular').then(({data}) => {
         titleLink.textContent = articleItem.title;
         articleTitle.append(titleLink);
 
-        article.querySelector('[data-image]').style.backgroundImage= `url(${articleItem.image_url})`;
-
+        // article.querySelector('[data-image]').style.backgroundImage= `url(${articleItem.image_url})`;
         // article.querySelector('[data-image]').innerHTML = `url(${articleItem.image})`;
-
         // article.querySelector('[data-excerpt]').textContent = articleItem.excerpt;
 
         const counterElement = article.querySelector('[data-views-counter]')

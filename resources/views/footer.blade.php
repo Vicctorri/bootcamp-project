@@ -44,11 +44,6 @@
                 <a href="{{ route('register') }}" class="text-reset">Register</a>
               </p>
               <p>
-                <a href="{{route('blog')}}" class="text-reset">Blog</a>
-              </p>
-              <p>
-                <a href="{{route('useful_advice')}}" class="text-reset">Useful Advice</a>
-              </p>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <img src="https://i0.wp.com/www.cssscript.com/wp-content/uploads/2018/03/Simple-Location-Picker.png?fit=561%2C421&ssl=1" alt="Lamp" width="390" height="290">
@@ -67,5 +62,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"></script>
+<script src="/assets/cart.js"></script>
 <script src="/assets/js/app.js"></script>
 <script src="/assets/blog/js/blog.js"></script>
+

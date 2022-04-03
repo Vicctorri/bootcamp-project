@@ -21,9 +21,11 @@
                     <div class="accordion-body">
                         @foreach($categories as $category)
                           <form>
-                            <label class="form-check">
-                              <input class="form-check-input" type="checkbox" value="">
-                              <span class="form-check-label">
+                              <option value="{{ $category->id }}"
+                                <label class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-label">
+                                    @if($filter['category'] === $category->id) selected @endif
                                 {{$category->name}}
                               </span>
                             </label>
@@ -114,7 +116,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">{{$book->title}}</h4>
                                     <p class="card-text">{{$book->author}}</p>
-                                    <a href="{{route('book_page', ['id'=>$book->id])}}" class="btt1 btn ">View</a>
+                                    <a href="{{route('book_page', ['id'=>$book->id])}}" class="btt1 btn">View</a>
                                 </div>
                             </div>
                         </div>

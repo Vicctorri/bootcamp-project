@@ -18,8 +18,8 @@ axios.get('/api/articles/most-popular').then(function (_ref) {
     var titleLink = document.createElement('a');
     titleLink.href = "/blog/article/".concat(articleItem.id);
     titleLink.textContent = articleItem.title;
-    articleTitle.append(titleLink);
-    article.querySelector('[data-image]').style.backgroundImage = "url(".concat(articleItem.image_url, ")"); // article.querySelector('[data-image]').innerHTML = `url(${articleItem.image})`;
+    articleTitle.append(titleLink); // article.querySelector('[data-image]').style.backgroundImage= `url(${articleItem.image_url})`;
+    // article.querySelector('[data-image]').innerHTML = `url(${articleItem.image})`;
     // article.querySelector('[data-excerpt]').textContent = articleItem.excerpt;
 
     var counterElement = article.querySelector('[data-views-counter]');
