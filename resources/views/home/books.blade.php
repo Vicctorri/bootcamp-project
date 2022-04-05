@@ -9,7 +9,9 @@
             <a href="{{route('blog')}}" class="btn button-blog btn-outline-light fw-bold ">Blog</a>
             <a href="{{route('useful_advice')}}" class="btn button-blog btn-outline-light fw-bold ">Useful Advice</a></div>
           <div class="col-md-3 mt-5">
-            <div class="card">
+              <form>
+
+              <div class="card">
               <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -18,18 +20,19 @@
                     </button>
                   </h2>
                   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body">
+                      <div class="accordion-body">
                         @foreach($categories as $category)
-                          <form>
-                              <option value="{{ $category->id }}"
+{{--{{ dd($category->id, $filter['category']) }}--}}
                                 <label class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="">
+                                  <input name="category[]"
+                                         class="form-check-input"
+                                         type="checkbox" value="{{$category->id}}"
+                                         @if(\in_array($category->id, $filter['category'])) checked @endif>
                                   <span class="form-check-label">
-                                    @if($filter['category'] === $category->id) selected @endif
                                 {{$category->name}}
                               </span>
                             </label>
-                          </form>
+
                         @endforeach
                     </div>
                   </div>
@@ -70,14 +73,13 @@
                   <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                     <div class="accordion-body">
                         @foreach($authors as $author)
-                            <form>
+
                                 <label class="form-check">
                                     <input class="form-check-input" type="checkbox" value="">
                                     <span class="form-check-label">
                                 {{$author->author}}
                               </span>
                                 </label>
-                            </form>
                         @endforeach
                     </div>
                   </div>
@@ -91,14 +93,12 @@
                   <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
                     <div class="accordion-body">
                         @foreach($editions as $edition)
-                            <form>
                                 <label class="form-check">
                                     <input class="form-check-input" type="checkbox" value="">
                                     <span class="form-check-label">
                                 {{$edition->edition}}
                               </span>
                                 </label>
-                            </form>
                         @endforeach
                     </div>
                   </div>
@@ -106,7 +106,11 @@
               </div>
             </div>
             <button class="btt1 button-blog mt-3 mx-5 mb-5" style="width: 180px;">Filter</button>
-            </div>
+              </form>
+
+          </div>
+
+
             <div class="col-md-9">
                 <div class="row">
                     @foreach($books as $book)
