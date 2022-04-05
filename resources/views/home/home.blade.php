@@ -3,7 +3,7 @@
 
     <main>
     <div class="page-header gradient">
-      <div class="container pt-5 ">
+      <div class="container">
           <div class="row align-items-center ">
               <div class="col-md-7 ">
                   <h1 class="my-2 fw-bold text-center">Why ViLibrary is important?</h1>

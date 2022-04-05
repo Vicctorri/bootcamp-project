@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid gradient">
         <div class="container"  >
-            <section  class="Form   mx-5 pt-5">
+            <section  class="Form   mx-5 pt-5 mb-5">
                 <div class="container">
                     <div class="row no-gutters " style="background-color: white; border-radius: 10px; box-shadow: 12px 12px 12px;" >
                         <div class="col-lg-5 p-0">

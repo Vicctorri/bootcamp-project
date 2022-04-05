@@ -34,7 +34,9 @@
                 <div class="bg-gray-100 shadow-sm">
                     <p>{{$book->description}}</p>
                 </div>
-                <button class="add-cart btn btt1 mt-5" >Add to cart</button>
+                <a href="#readbook">
+                    <button class="add-cart btn btt1 mt-5" >READ</button>
+                </a>
             </div>
             <a class="favorite" href="#">
               <span class="icon mt-5">
@@ -78,6 +80,9 @@
                       </tr>
                     </tbody>
                   </table>
+                        <div>
+                          <embed id="readbook" src="{{asset('./assets/img/21-Lessons-Teacher-Resource.pdf')}}" width="100%" height="1060px">
+                        </div>
               </div>
           </div>
       </div>
