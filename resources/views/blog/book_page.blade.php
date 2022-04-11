@@ -22,16 +22,21 @@
 
       <div class="book-page row product-details ">
           <div class="col-md-2">
-  
+
           </div>
           <div class="img-book col-sm-6 col-xs-12 ">
-            <img src="{{asset('./assets/img/b1.jpg')}}" alt="" class="img-book-page img-fluid ">
+              <img src="{{ \Illuminate\Support\Facades\Storage::url($book->img) }}" class="img-book-page img-fluid" alt="{{$book->title}}">
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12 mt-5">
             <div class="book-info " >
-                <h1>Loretta Graziano Breuning</h1>
-                <p>Habits of a Happy Brain: Retrain Your Brain to Boost Your Serotonin, Dopamine, Oxytocin, & Endorphin Levels, Paperback - Loretta Graziano Breuning</p>
-                <button class="btn btt1 mt-5" > Add to card </button>   
+                <h1>{{$book->title}}</h1>
+                <p>{{$book->authors[0]->name}} {{$book->authors[0]->surname}}</p>
+                <div class="bg-gray-100 shadow-sm">
+                    <p>{{$book->description}}</p>
+                </div>
+                <a href="#readbook">
+                    <button class="add-cart btn btt1 mt-5" >READ</button>
+                </a>
             </div>
             <a class="favorite" href="#">
               <span class="icon mt-5">
@@ -40,55 +45,44 @@
                 </svg>
               </span>
               Favorites
-            </a> 
-       
+            </a>
+
           </div>
           <div class="container">
-              <div class="mt-5 text1 shadow-sm">
-                  <a href="#BookDescription" class="text1">Description</a>
-                  <a href="#BookDetails" class="text1">Details</a>
-              </div>
-              <div id="BookDescription" class="details">Description</div>
-              <div class="text2 shadow-sm">
-                <p>Get ready to boost your happiness in just 45 daysHabits of a Happy Brain shows you how to retrain your brain to turn on the chemicals that make you happy. Each page offers simple activities that help you understand the roles of your "happy chemicals"--serotonin, dopamine, oxytocin, and endorphin. You'll also learn how to build new habits by rerouting the electricity in your brain to flow down a new pathway, making it even easier to trigger these happy chemicals and increase feelings of satisfaction when you need them most. Filled with dozens of exercises that will help your reprogram your brain, 
-                Habits of a Happy Brain shows you how to live a happier, healthier life</p>
-              </div>
-              
               <div class="text3">
                 <table class="table table-striped">
                     <thead>
                       <tr>
-                        <th scope="col"> </th>
-                        <th id="BookDetails" class=" px-5">Details </th>
+                          <th id="BookDetails" class="mx-5 px-5">Details </th>
+                          <th scope="col"> </th>
                       </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <th scope="row">Title</th>
+                            <td>{{$book->title}}</td>
+                        </tr>
                       <tr>
                         <th scope="row">Author</th>
-                        <td>Loretta Graziano Breuning</td>
+                        <td>{{$book->authors[0]->name}} {{$book->authors[0]->surname}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Edition</th>
-                        <td>Adams Media Corporation</td>
+                        <td>{{$book->edition}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Number of pages</th>
-                        <td>300</td>
+                        <td>{{$book->page_count}}</td>
                       </tr>
                       <tr>
-                        <th scope="row">Author</th>
-                        <td>Loretta Graziano Breuning</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Edition</th>
-                        <td>Adams Media Corporation</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Number of pages</th>
-                        <td>300</td>
+                        <th scope="row">Volume</th>
+                        <td>{{$book->volume}}</td>
                       </tr>
                     </tbody>
                   </table>
+                        <div>
+                          <embed id="readbook" src="{{asset('./assets/img/21-Lessons-Teacher-Resource.pdf')}}" width="100%" height="1060px">
+                        </div>
               </div>
           </div>
       </div>

@@ -1,15 +1,15 @@
 @extends('book-layout')
-@section('content')   
+@section('content')
 <main>
     <div class="category gradient">
-      <div class="container pt-5 mt-5">
+        <div class="container pt-5 mt-5">
         <div class="row">
-          <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <a href="news.html" class="btn button-blog btn-outline-light fw-bold ">News</a>
-            <a href="{{route('blog')}}" class="btn button-blog btn-outline-light fw-bold active">Blog</a>
-            <a href="{{route('useful_advice')}}" class="btn button-blog btn-outline-light fw-bold ">Useful Advice</a>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <a href="news.html" class="btn button-blog btn-outline-light fw-bold ">News</a>
+                <a href="{{route('blog')}}" class="btn button-blog btn-outline-light fw-bold active">Blog</a>
+                <a href="{{route('useful_advice')}}" class="btn button-blog btn-outline-light fw-bold ">Useful Advice</a>
+            </div>
         </div>
-        </div> 
         <div class="container bootstrap snippets bootdey">
           <hr>
         <div class="row m-2 rounded-lg">
@@ -18,7 +18,7 @@
             <div class="col">
               <select  class="form-select" name="category">
                 @foreach($categories as $category)
-               <option value="{{ $category->id }}" 
+               <option value="{{ $category->id }}"
                @if($filter['category'] === $category->id) selected @endif
                >{{ $category->name}}</option>
                 @endforeach
@@ -37,16 +37,26 @@
 
         </div>
           <hr>
-            @foreach($articles as $article)
-              <div class="col">
-                @include('blog.article', ['article => $article'])
-              </div>
-            @endforeach
-            <div class="p-2 mt-5">
-            {{ $articles->links() }}
-            </div>   
+                <div class="row">
+                    <div class="col-9">
+                        @foreach($articles as $article)
+                            <div class="col-12">
+                                @include('blog.article', ['article => $article'])
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <div class="col-3">
+                        <div class="well blog">
+                            @include('blog/popular-articles')
+                        </div>
+                    </div>
+                    <div class="pt-3">{{ $articles->links() }}
+                    </div>
+
+                </div>
           </div>
-        </div> 
+        </div>
       </div>
    </div>
 </main>

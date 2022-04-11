@@ -4,7 +4,7 @@
 
 <div class="container-fluid gradient">
       <div class="container">
-          <div class="contact-page "> 
+          <div>
               <h2 class="text-center shadow-sm fw-bold  p-3 ">Contact</h2>
           </div>
           <div class="row">
@@ -52,7 +52,7 @@
               <div class="col-md-5">
                   <div class="ml-5">
                       <div>
-                         
+
                           <img src="{{asset('./assets/img/library.jpg')}}" alt="..." class="img-fluid">
                       </div>
                   </div>

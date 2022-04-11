@@ -10,13 +10,16 @@ class Book extends Model
     use HasFactory;
 
     protected $fillable = [
+
         'category_id',
         'title',
         'page_count',
         'edition',
         'volume',
-        'description'
+        'description',
+        'img'
     ];
+
 
     public function borrows()
     {
@@ -29,21 +32,13 @@ class Book extends Model
 
     public function authors()
     {
-        return $this->belongsToMany(Author::class);
+        return $this->belongsToMany(Author::class, 'book_author');
     }
 
     public function getData(): array
     {
         return [
-            'id' => $this->bookId,
-            'category_id'=> $this->category_id,
-            'title' => $this->title,
-            'page_count' => $this->page_count,
-            'edition' => $this->edition,
-            'volume' => $this->volume,
-            'description' => $this->descroption,
+            'id' => $this->id,
         ];
     }
-
-
 }

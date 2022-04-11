@@ -9,7 +9,9 @@
             <a href="{{route('blog')}}" class="btn button-blog btn-outline-light fw-bold ">Blog</a>
             <a href="{{route('useful_advice')}}" class="btn button-blog btn-outline-light fw-bold ">Useful Advice</a></div>
           <div class="col-md-3 mt-5">
-            <div class="card">
+              <form>
+
+              <div class="card">
               <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -18,91 +20,20 @@
                     </button>
                   </h2>
                   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body">
-                      
-                      <form>
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Autobiography
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Business/economics
-                          </span>
-                        </label>  
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Dictionary
-                          </span>
-                        </label>  
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Health/fitness
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Philosophy
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Science
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Young adult
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Romance
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Math
-                          </span>
-                        </label> 
-                      </form>
-                      <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <span class="form-check-label">
-                          Romance
-                        </span>
-                      </label> 
-                      <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <span class="form-check-label">
-                          Math
-                        </span>
-                      </label> 
-                    </form>
-                    <label class="form-check">
-                      <input class="form-check-input" type="checkbox" value="">
-                      <span class="form-check-label">
-                        Romance
-                      </span>
-                    </label> 
-                    <label class="form-check">
-                      <input class="form-check-input" type="checkbox" value="">
-                      <span class="form-check-label">
-                        Math
-                      </span>
-                    </label> 
-                  </form>
+                      <div class="accordion-body">
+                        @foreach($categories as $category)
+{{--{{ dd($category->id, $filter['category']) }}--}}
+                                <label class="form-check">
+                                  <input name="category[]"
+                                         class="form-check-input"
+                                         type="checkbox" value="{{$category->id}}"
+                                         @if(\in_array($category->id, $filter['category'])) checked @endif>
+                                  <span class="form-check-label">
+                                {{$category->name}}
+                              </span>
+                            </label>
 
+                        @endforeach
                     </div>
                   </div>
                 </div>
@@ -128,7 +59,7 @@
                             Available
                           </span>
                         </label>
-                        </div> 
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -141,142 +72,67 @@
                   </h2>
                   <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                     <div class="accordion-body">
-                      <form>
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Osho
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Paulo Coelho
-                          </span>
-                        </label>  
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Bob Olson
-                          </span>
-                        </label>  
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Garth Stein
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Juan Arias
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Juan Arias
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Juan Arias
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Juan Arias
-                          </span>
-                        </label> 
-                      </form>
+                        @foreach($authors as $author)
+
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    <span class="form-check-label">
+                                {{$author->author}}
+                              </span>
+                                </label>
+                        @endforeach
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                      Other
+                      Edition
                     </button>
                   </h2>
                   <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
                     <div class="accordion-body">
-                      <form>
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Osho
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Paulo Coelho
-                          </span>
-                        </label>  
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Bob Olson
-                          </span>
-                        </label>  
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Garth Stein
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Juan Arias
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Juan Arias
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Juan Arias
-                          </span>
-                        </label> 
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-label">
-                            Juan Arias
-                          </span>
-                        </label> 
-                      </form>
+                        @foreach($editions as $edition)
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    <span class="form-check-label">
+                                {{$edition->edition}}
+                              </span>
+                                </label>
+                        @endforeach
                     </div>
                   </div>
                 </div>
               </div>
-            </div> 
-            <button class="btt1 button-blog mt-3 mx-5 mb-5" style="width: 180px;">Filter</button>
             </div>
+            <button class="btt1 button-blog mt-3 mx-5 mb-5" style="width: 180px;">Filter</button>
+              </form>
+
+          </div>
+
+
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="book-card">
-                        <img src="{{asset('./assets/img/b1.jpg')}}" class="card-img-top mx-4" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title">Habits of a Happy Brain</h4>
-                            <p class="card-text">Loretta Graziano Breuning</p>
-                            <a href="{{route('book_page')}}" class="btt1 btn ">View</a>
+                    @foreach($books as $book)
+                        <div class="col-4">
+                            <div class="book-card">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($book->img) }}" class="card-img-top mx-4" alt="{{ $book->title }}">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{$book->title}}</h4>
+                                    <p class="card-text">{{$book->author}}</p>
+                                    <a href="{{route('book_page', ['id'=>$book->id])}}" class="btt1 btn">View</a>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-            </div> 
+                <div class="pt-3">{{ $books->links() }}
+                </div>
+            </div>
         </div>
     </div>
     </div>
 </main>
-            
+
 
 @endsection
