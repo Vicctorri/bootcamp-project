@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ArticleApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
@@ -19,5 +20,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/api/articles/most-popular',  [ArticleApiController::class, 'readMostPopularArticles']);
+Route::get('/api/articles',  [ArticleApiController::class, 'readAllArticles']);
+Route::get('/api/articles/{id}',  [ArticleApiController::class, 'readOneArticle']);
+Route::delete('/api/articles/{id}',  [ArticleApiController::class, 'deleteArticle']);
+Route::post('/api/articles/',  [ArticleApiController::class, 'createArticle']);
 
 Route::post('', [ContactController::class, 'sendContact'])->name('sendContact');
