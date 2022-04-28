@@ -1,11 +1,8 @@
 <?php
 
-use App\Http\Controllers\api\ArticleApiController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\oldHomeController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BookPageController;
@@ -29,7 +26,7 @@ use App\Http\Controllers\FavoriteController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.home');
 });
 
 
@@ -48,9 +45,14 @@ Route::post('/contact', [ContactController::class, 'send'])->name('contact.send'
     ->middleware('log.activity:sendContact');
 
 
-
 //Route::get('/home', [App\Http\Controllers\oldHomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'admin'], function() {
+    Route::get('/dashboard', function(){
+        return view('dashboard');
+    });
+});

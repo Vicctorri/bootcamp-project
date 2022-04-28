@@ -25,12 +25,12 @@
 
           </div>
           <div class="img-book col-sm-6 col-xs-12 ">
-              <img src="{{ \Illuminate\Support\Facades\Storage::url($book->img) }}" class="img-book-page img-fluid" alt="{{$book->title}}">
+{{--              <img src="{{ \Illuminate\Support\Facades\Storage::url($book->img) }}" class="img-book-page img-fluid" alt="{{$book->title}}">--}}
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12 mt-5">
             <div class="book-info " >
                 <h1>{{$book->title}}</h1>
-                <p>{{$book->authors[0]->name}} {{$book->authors[0]->surname}}</p>
+{{--                <p>{{$book->authors[0]->name}} {{$book->authors[0]->surname}}</p>--}}
                 <div class="bg-gray-100 shadow-sm">
                     <p>{{$book->description}}</p>
                 </div>
@@ -64,7 +64,7 @@
                         </tr>
                       <tr>
                         <th scope="row">Author</th>
-                        <td>{{$book->authors[0]->name}} {{$book->authors[0]->surname}}</td>
+                        <td>{{$book->authors}} {{$book->authors}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Edition</th>
