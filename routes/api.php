@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\ArticleApiController;
+use App\Http\Controllers\api\UsersApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
@@ -27,3 +28,13 @@ Route::delete('/api/articles/{id}',  [ArticleApiController::class, 'deleteArticl
 Route::post('/api/articles/',  [ArticleApiController::class, 'createArticle']);
 
 Route::post('', [ContactController::class, 'sendContact'])->name('sendContact');
+
+
+//Route::middleware('auth:sanctum')->group( function () {
+    Route::get('/users', [UsersApiController::class, 'index']);
+
+    Route::group(['prefix' => 'user'], function (){
+        Route::get('/{id}', [UsersApiController::class, 'show']);
+        Route::delete('/{id}', [UsersApiController::class, 'delete']);
+    });
+//});
