@@ -30,11 +30,12 @@ Route::post('/api/articles/',  [ArticleApiController::class, 'createArticle']);
 Route::post('', [ContactController::class, 'sendContact'])->name('sendContact');
 
 
-//Route::middleware('auth:sanctum')->group( function () {
-    Route::get('/users', [UsersApiController::class, 'index']);
+//User
+Route::get('/users', [UsersApiController::class, 'index']);
 
-    Route::group(['prefix' => 'user'], function (){
-        Route::get('/{id}', [UsersApiController::class, 'show']);
-        Route::delete('/{id}', [UsersApiController::class, 'delete']);
-    });
-//});
+Route::group(['prefix' => 'user'], function () {
+    Route::post('/', [UsersApiController::class, 'store']);
+    Route::get('/{id}', [UsersApiController::class, 'show']);
+    Route::put('/{id}', [UsersApiController::class, 'update']);
+    Route::delete('/{id}', [UsersApiController::class, 'delete']);
+});

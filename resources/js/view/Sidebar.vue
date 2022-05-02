@@ -5,7 +5,7 @@
             class="el-menu-vertical-demo"
             background-color="transparent"
             text-color="#fff"
-            active-text-color="#ffd04b"
+            active-text-color="#F99B41"
             :router="true"
         >
             <el-menu-item index="1" :route="{ name: 'ExampleComponent' }">
@@ -31,9 +31,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "resources/sass/app";
+
 .sidebar {
-    background-color: #545c64;
-    height: calc(100vh - 40px);
+    background-color: #1b2133;
+    height: 100vh;
     min-height: 500px;
     display: flex;
     flex-direction: column;
@@ -47,6 +49,7 @@ export default {
     a {
         text-decoration: none;
         padding: 0;
+        color: $--color-text;
     }
 }
 </style>

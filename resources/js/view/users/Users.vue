@@ -1,7 +1,8 @@
 <template>
     <div>
-        <div class="view-title">
+        <div class="view-title d-flex">
             <h1>Users</h1>
+            <user-create-component></user-create-component>
         </div>
         <div class="view-content">
             <el-table
@@ -19,7 +20,7 @@
                     label="Email">
                 </el-table-column>
                 <el-table-column
-                    prop="role"
+                    prop="role.name"
                     label="Role"
                     width="180">
                 </el-table-column>
@@ -46,8 +47,14 @@
 </template>
 
 <script>
+import UserCreateComponent from '../../components/users/UserCreateComponent';
+
 export default {
     name: 'Users',
+    components: {UserCreateComponent},
+    comments: {
+        UserCreateComponent
+    },
     data() {
         return {
             loading: true
@@ -103,5 +110,7 @@ export default {
 <style lang="scss" scoped>
 .d-flex {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 </style>
