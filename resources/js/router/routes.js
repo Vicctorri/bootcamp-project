@@ -2,8 +2,9 @@ import ExampleComponent from '../components/ExampleComponent';
 import Dashboard from '../view/Dashboard';
 import Users from '../view/users/Users';
 import UserDetails from '../components/users/UserDetailsComponent';
-import Books from "../view/users/Books";
+import Books from "../view/books/Books";
 import BookDetails from "../components/books/BookDetailsComponent";
+import Categories from "../view/categories/Categories";
 import Error from '../view/Error';
 
 export default [
@@ -37,6 +38,11 @@ export default [
                 path: '/admin-book/:id/details',
                 component: BookDetails,
                 name: 'BookDetails'
+            },
+            {
+                path: '/categories',
+                component: Categories,
+                name: 'Categories'
             }
         ]
     },
