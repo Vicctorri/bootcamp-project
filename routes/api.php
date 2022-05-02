@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\ArticleApiController;
+use App\Http\Controllers\api\BooksApiController;
 use App\Http\Controllers\api\UsersApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -38,4 +39,14 @@ Route::group(['prefix' => 'user'], function () {
     Route::get('/{id}', [UsersApiController::class, 'show']);
     Route::put('/{id}', [UsersApiController::class, 'update']);
     Route::delete('/{id}', [UsersApiController::class, 'delete']);
+});
+
+//Books
+Route::get('/books', [BooksApiController::class, 'index']);
+
+Route::group(['prefix' => 'book'], function () {
+    Route::get('/{id}', [BooksApiController::class, 'show']);
+    Route::post('/', [BooksApiController::class, 'store']);
+    Route::put('/{id}', [BooksApiController::class, 'update']);
+    Route::delete('/{id}', [BooksApiController::class, 'delete']);
 });

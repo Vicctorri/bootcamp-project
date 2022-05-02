@@ -9,7 +9,7 @@ export default [
         path: '/dashboard',
         component: Dashboard,
         name: 'Dashboard',
-        redirect: { name: 'Dashboard' },
+        redirect: { name: 'ExampleComponent' },
         children: [
             {
                 path: '/example',

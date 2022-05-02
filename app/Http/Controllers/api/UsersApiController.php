@@ -21,7 +21,11 @@ class UsersApiController extends BaseController
         return UsersCollection::collection(User::all());
     }
 
-    public function store(Request $request)
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
