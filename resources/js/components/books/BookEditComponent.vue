@@ -20,7 +20,14 @@
                     <el-input v-model="book.edition" autocomplete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="Category" prop="category_id">
-                    <el-input v-model="book.category.name" autocomplete="off"></el-input>
+                    <el-select v-model="book.category.id" placeholder="">
+                        <el-option
+                            v-for="category in categories"
+                            :key="category.id"
+                            :label="category.name"
+                            :value="category.id"
+                        ></el-option>
+                    </el-select>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
@@ -53,12 +60,22 @@ export default {
             }
         }
     },
+    computed: {
+        categories(){
+            return this.$store.getters['category/getCategories'];
+        }
+    },
+    mounted() {
+        this.$store.dispatch('category/loadCategories');
+        console.log(this.book);
+    },
     methods: {
         updateBook(formRef){
             this.$refs[formRef].validate((valid) => {
                 if (valid) {
                     this.$store.dispatch('book/updateBook', this.book)
                         .then(() => {
+                            this.$store.dispatch('book/loadBook', this.$route.params.id);
                             this.dialogFormVisible = false;
                             this.$notify({
                                 title: 'Success',
@@ -82,3 +99,9 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.el-select {
+    width: 100%;
+}
+</style>
