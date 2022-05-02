@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <el-menu
-            default-active="2"
+            default-active="1"
             class="el-menu-vertical-demo"
             background-color="transparent"
             text-color="#fff"
@@ -13,6 +13,9 @@
             </el-menu-item>
             <el-menu-item index="2" :route="{ name: 'Users' }">
                 <span>Users</span>
+            </el-menu-item>
+            <el-menu-item index="3" :route="{ name: 'Books' }">
+                <span>Books</span>
             </el-menu-item>
         </el-menu>
         <div>

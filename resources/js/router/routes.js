@@ -2,11 +2,13 @@ import ExampleComponent from '../components/ExampleComponent';
 import Dashboard from '../view/Dashboard';
 import Users from '../view/users/Users';
 import UserDetails from '../components/users/UserDetailsComponent';
+import Books from "../view/users/Books";
+import BookDetails from "../components/books/BookDetailsComponent";
 import Error from '../view/Error';
 
 export default [
     {
-        path: '/dashboard',
+        path: '/dashboard/',
         component: Dashboard,
         name: 'Dashboard',
         redirect: { name: 'ExampleComponent' },
@@ -25,6 +27,16 @@ export default [
                 path: '/user/:id/details',
                 component: UserDetails,
                 name: 'UserDetails',
+            },
+            {
+                path: '/admin-books',
+                component: Books,
+                name: 'Books'
+            },
+            {
+                path: '/admin-book/:id/details',
+                component: BookDetails,
+                name: 'BookDetails'
             }
         ]
     },
