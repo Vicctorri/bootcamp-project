@@ -1,4 +1,4 @@
-import {loadUsers, loadUser, deleteUser} from "../services/users/users.service";
+import {loadUsers, loadUser, createUser, updateUser, deleteUser} from "../services/users/users.service";
 
 const state = () => ({
     users: [],
@@ -31,6 +31,25 @@ const actions = {
             throw e;
         }
     },
+    async createUser({commit}, user){
+        try {
+            const response = await createUser(user);
+            commit('CREATE_USER', response.data);
+        } catch (e) {
+            throw e;
+        }
+    },
+    async updateUser({commit}, user){
+      try {
+          await updateUser(user.id, {
+              name: user.name,
+              email: user.email,
+              password: user.password
+          });
+      } catch (e) {
+          throw e;
+      }
+    },
     async deleteUser({commit}, userId){
         try {
             await deleteUser(userId);
@@ -47,6 +66,9 @@ const mutations = {
     },
     LOAD_USER(state, user){
         state.user = user;
+    },
+    CREATE_USER(state, user){
+        state.users.push(user);
     },
     REMOVE_USER(state, userId){
         const index = state.users.findIndex(user => user.id === userId);

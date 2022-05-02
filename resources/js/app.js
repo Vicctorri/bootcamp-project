@@ -18,6 +18,7 @@ Vue.component('app', require('./App').default);
 import Vue from 'vue';
 import ElementUi from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import '../sass/app.scss'
 import locale from 'element-ui/lib/locale/lang/en';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';

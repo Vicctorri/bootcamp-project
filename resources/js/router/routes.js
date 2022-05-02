@@ -1,4 +1,3 @@
-import Login from '../view/auth/Login';
 import ExampleComponent from '../components/ExampleComponent';
 import Dashboard from '../view/Dashboard';
 import Users from '../view/users/Users';
@@ -10,34 +9,22 @@ export default [
         path: '/dashboard',
         component: Dashboard,
         name: 'Dashboard',
-        redirect: { name: 'ExampleComponent' },
-        meta: {
-            guard: 'auth'
-        },
+        redirect: { name: 'Dashboard' },
         children: [
             {
                 path: '/example',
                 component: ExampleComponent,
                 name: 'ExampleComponent',
-                meta: {
-                    guard: 'auth'
-                }
             },
             {
                 path: '/users',
                 component: Users,
                 name: 'Users',
-                meta: {
-                    guard: 'auth'
-                }
             },
             {
                 path: '/user/:id/details',
                 component: UserDetails,
                 name: 'UserDetails',
-                meta: {
-                    guard: 'auth'
-                }
             }
         ]
     },
