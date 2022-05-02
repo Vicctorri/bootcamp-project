@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\api\ArticleApiController;
 use App\Http\Controllers\api\BooksApiController;
+use App\Http\Controllers\api\CategoriesApiController;
 use App\Http\Controllers\api\UsersApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -49,4 +50,14 @@ Route::group(['prefix' => 'book'], function () {
     Route::post('/', [BooksApiController::class, 'store']);
     Route::put('/{id}', [BooksApiController::class, 'update']);
     Route::delete('/{id}', [BooksApiController::class, 'delete']);
+});
+
+//Categories
+Route::get('/categories', [CategoriesApiController::class, 'index']);
+
+Route::group(['prefix' => 'category'], function() {
+    Route::post('/', [CategoriesApiController::class, 'store']);
+    Route::get('/{id}', [CategoriesApiController::class, 'show']);
+    Route::put('/{id}', [CategoriesApiController::class, 'update']);
+    Route::delete('/{id}', [CategoriesApiController::class, 'delete']);
 });
