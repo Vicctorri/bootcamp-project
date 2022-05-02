@@ -1,7 +1,7 @@
 <template>
   <div class="error">
     <div class="header">
-      <span>WOW Dashboard</span>
+      <span>Library Dashboard</span>
     </div>
 
     <el-card>

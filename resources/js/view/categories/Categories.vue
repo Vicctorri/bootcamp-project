@@ -98,6 +98,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$--color-primary: #1b2133;
+$--color-secondary: #CA5BB6;
+$--color-danger: #F25A62;
+$--color-success: #38C8F4;
+$--color-text: #F99B41;
+
+.el-button--primary {
+    background-color: $--color-primary;
+}
+
+.el-button--danger {
+    background-color: $--color-danger;
+}
+
 .d-flex {
     display: flex;
     justify-content: space-between;
