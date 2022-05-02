@@ -14,4 +14,5 @@ class Book_Author extends Model
         'author_id'
     ];
 
+    public $timestamps = false;
 }

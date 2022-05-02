@@ -17,8 +17,10 @@ class Book extends Model
         'edition',
         'volume',
         'description',
-        'img'
+        'updated_at'
     ];
+
+    public $timestamps = false;
 
 
     public function borrows()

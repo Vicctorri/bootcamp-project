@@ -27,7 +27,7 @@ return redirect(route('login')); // redirect to login page
         $search = request()->query('search');
         $filterCategories = request()->query('category') ?: [];
 
-        $books = Book::selectRaw("books.title as title, books.img as img, books.id as id,CONCAT(authors.name, ' ', authors.surname) as author")
+        $books = Book::selectRaw("books.title as title, books.id as id,CONCAT(authors.name, ' ', authors.surname) as author")
             ->leftJoin('book_author', 'book_author.book_id', '=', 'books.id')
             ->leftJoin('authors', 'book_author.author_id', '=', 'authors.id')
             ->where('title', 'LIKE', "%{$search}%");

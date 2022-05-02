@@ -1,11 +1,8 @@
 <?php
 
-use App\Http\Controllers\api\ArticleApiController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\oldHomeController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BookPageController;
@@ -29,11 +26,11 @@ use App\Http\Controllers\FavoriteController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.home');
 });
 
 
-Route::get('/books/blog', [BlogController::class, 'index'])->name('blog');
+//Route::get('/books/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/blog/article/{id}', [ArticleController::class, 'show'])->name('blogArticle');
@@ -47,14 +44,15 @@ Route::get('/books/favorites', [FavoriteController::class, 'index'])->name('favo
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send')
     ->middleware('log.activity:sendContact');
 
-Route::get('/api/articles/most-popular',  [ArticleApiController::class, 'readMostPopularArticles']);
-Route::get('/api/articles',  [ArticleApiController::class, 'readAllArticles']);
-Route::get('/api/articles/{id}',  [ArticleApiController::class, 'readOneArticle']);
-Route::delete('/api/articles/{id}',  [ArticleApiController::class, 'deleteArticle']);
-Route::post('/api/articles/',  [ArticleApiController::class, 'createArticle']);
 
 //Route::get('/home', [App\Http\Controllers\oldHomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'admin'], function() {
+    Route::get('{path}', function(){
+        return view('dashboard');
+    });
+});

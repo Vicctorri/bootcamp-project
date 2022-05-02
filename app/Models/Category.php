@@ -16,6 +16,8 @@ class Category extends Model
         'description',
     ];
 
+    public $timestamps = false;
+
 
     public function books()
     {
