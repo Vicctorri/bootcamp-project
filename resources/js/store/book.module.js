@@ -47,7 +47,7 @@ const actions = {
                 page_count: book.page_count,
                 volume: book.volume,
                 edition: book.edition,
-                category_id: book.category_id
+                category_id: book.category.id
             });
         } catch (e) {
             throw e;

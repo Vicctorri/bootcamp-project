@@ -1,6 +1,6 @@
 <template>
     <div>
-        <book-edit-component :book="book"></book-edit-component>
+        <book-edit-component :book="book" loadBook="loadBook"></book-edit-component>
         <el-descriptions label="Username">
             <el-descriptions-item label="Title">{{ book.title }}</el-descriptions-item>
             <el-descriptions-item label="Description">{{ book.description }}</el-descriptions-item>

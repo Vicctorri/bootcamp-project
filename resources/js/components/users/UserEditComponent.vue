@@ -62,6 +62,7 @@ export default {
                 if (valid) {
                     this.$store.dispatch('user/updateUser', this.user)
                         .then(() => {
+                            // this.$store.dispatch('user/loadUser', this.$route.params.id);
                             this.dialogFormVisible = false;
                             this.$notify({
                                 title: 'Success',
