@@ -13,6 +13,7 @@ const createUser = (user) => {
 }
 
 const updateUser = (id, user) => {
+    console.log(id);
     return httpRequest.put(`/user/${id}`, user);
 }
 
