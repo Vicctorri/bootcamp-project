@@ -17,6 +17,9 @@
             <el-menu-item index="3" :route="{ name: 'Books' }">
                 <span>Books</span>
             </el-menu-item>
+            <el-menu-item index="3" :route="{ name: 'Categories' }">
+                <span>Categories</span>
+            </el-menu-item>
         </el-menu>
         <div>
             <el-button>
