@@ -23,6 +23,7 @@ class BooksCollection extends JsonResource
             'edition' => $this->edition,
             'volume' => $this->volume,
             'description' => $this->description,
+            'image' => $this->image,
         ];
     }
 }

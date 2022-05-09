@@ -58,6 +58,12 @@ export default {
                         required: true,
                         message: 'Please input book title'
                     }
+                ],
+                category_id: [
+                    {
+                        required: true,
+                        message: 'Please select an category'
+                    }
                 ]
             }
         }
