@@ -25,7 +25,7 @@
 
           </div>
           <div class="img-book col-sm-6 col-xs-12 ">
-{{--              <img src="{{ \Illuminate\Support\Facades\Storage::url($book->img) }}" class="img-book-page img-fluid" alt="{{$book->title}}">--}}
+              <img src="{{ asset('./images').'/'.$book->image }}" class="img-book-page img-fluid" alt="{{$book->title}}">
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12 mt-5">
             <div class="book-info " >
@@ -81,7 +81,7 @@
                     </tbody>
                   </table>
                         <div>
-                          <embed id="readbook" src="{{asset('./assets/img/21-Lessons-Teacher-Resource.pdf')}}" width="100%" height="1060px">
+                          <embed id="readbook" src="{{asset('./files'.'/'.$book->file)}}" width="100%" height="1060px">
                         </div>
               </div>
           </div>
