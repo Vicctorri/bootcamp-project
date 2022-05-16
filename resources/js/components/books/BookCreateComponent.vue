@@ -2,8 +2,21 @@
     <div>
         <el-button type="primary" @click="dialogFormVisible = true">Add book</el-button>
 
-        <el-dialog title="Add book" :visible.sync="dialogFormVisible"  width="500px">
+        <el-dialog title="Add book" :visible.sync="dialogFormVisible" width="500px">
             <el-form :model="form" :rules="rules" ref="bookForm">
+                <el-form-item label="Image">
+                    <el-upload
+                        action=""
+                        :http-request="handleSuccess"
+                        list-type="image"
+                        :auto-upload="false"
+                        :on-remove="deleteAttachment"
+                        :file-list="formData.files"
+                        :on-change="photoChanged"
+                    >
+                        <el-button size="mini" type="primary">Add file</el-button>
+                    </el-upload>
+                </el-form-item>
                 <el-form-item label="Title" prop="title">
                     <el-input v-model="form.title" autocomplete="off"></el-input>
                 </el-form-item>
@@ -43,6 +56,11 @@ export default {
     name: 'BookCreateComponent',
     data() {
         return {
+            image: null,
+            formData: {
+                files: []
+            },
+            imageUrl: '',
             dialogFormVisible: false,
             form: {
                 title: '',
@@ -51,9 +69,10 @@ export default {
                 volume: '',
                 edition: '',
                 category_id: '',
+                image: ''
             },
             rules: {
-                name: [
+                title: [
                     {
                         required: true,
                         message: 'Please input book title'
@@ -69,25 +88,27 @@ export default {
         }
     },
     computed: {
-        categories(){
+        categories() {
             return this.$store.getters['category/getCategories'];
-        }
+        },
     },
     mounted() {
         this.$store.dispatch('category/loadCategories');
     },
     methods: {
-        createBook(formRef){
+        createBook(formRef) {
             this.$refs[formRef].validate((valid) => {
                 if (valid) {
-                    this.$store.dispatch('book/createBook', {
-                        title: this.form.title,
-                        description: this.form.description,
-                        page_count: this.form.page_count,
-                        volume: this.form.volume,
-                        edition: this.form.edition,
-                        category_id: this.form.category_id
-                    }).then(() => {
+                    const formData = new FormData();
+                    formData.append('title', this.form.title);
+                    formData.append('description', this.form.description);
+                    formData.append('page_count', this.form.page_count);
+                    formData.append('volume', this.form.volume);
+                    formData.append('edition', this.form.edition);
+                    formData.append('category_id', this.form.category_id);
+                    formData.append('image', this.form.image);
+
+                    this.$store.dispatch('book/createBook', formData).then(() => {
                         this.dialogFormVisible = false;
                         this.$notify({
                             title: 'Success',
@@ -104,6 +125,22 @@ export default {
 
                 return false;
             })
+        },
+        photoChanged(file){
+            this.form.image = file.raw;  // add photo to form when it's selected
+            this.$message({
+                message: 'Image uploaded successful!',
+                type: 'success'
+            });
+        },
+        handleSuccess(file) {
+            console.log(file);
+        },
+        deleteAttachment(){
+            this.$message({
+                message: 'Image deleted successful!',
+                type: 'success'
+            });
         }
     }
 }
@@ -126,5 +163,29 @@ $--color-text: #F99B41;
 
 .el-select {
     width: 100%;
+}
+
+.avatar-uploader .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+    border-color: #409EFF;
+}
+.avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    line-height: 178px;
+    text-align: center;
+}
+.avatar {
+    width: 178px;
+    height: 178px;
+    display: block;
 }
 </style>

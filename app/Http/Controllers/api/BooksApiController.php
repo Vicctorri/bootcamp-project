@@ -33,11 +33,18 @@ class BooksApiController extends BaseController
             'edition' => 'string',
             'volume' => 'integer',
             'description' => 'string',
+            'image' => 'required', 'file', 'filled', 'mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         if ($validator->fails()) {
             return $this->sendError($validator->errors());
         }
+
+        $image = $request->file('image');
+        $name = $image->getClientOriginalName();
+
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $name);
 
         $book = new Book([
             'category_id' => $request->get('category_id'),
@@ -46,7 +53,9 @@ class BooksApiController extends BaseController
             'edition' => $request->get('edition'),
             'volume' => $request->get('volume'),
             'description' => $request->get('description'),
+            'image' => $name
         ]);
+
         $book->save();
 
         return $this->sendResponse(new BookCollection($book), 'Book successfully created.');
