@@ -11,6 +11,7 @@ use App\Http\Controllers\BooksController;
 use App\Http\Controllers\UsefulAdviceController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\LanguageController;
 
 
 
@@ -25,10 +26,11 @@ use App\Http\Controllers\FavoriteController;
 |
 */
 
+
 Route::get('/', function () {
     return view('home.home');
 });
-
+Route::get('/lang', [LanguageController::class, 'langChange'])->name('langChange');
 
 //Route::get('/books/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
@@ -45,7 +47,7 @@ Route::post('/contact', [ContactController::class, 'send'])->name('contact.send'
     ->middleware('log.activity:sendContact');
 
 
-//Route::get('/home', [App\Http\Controllers\oldHomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\oldHomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
@@ -56,3 +58,5 @@ Route::group(['middleware' => 'admin'], function() {
         return view('dashboard');
     });
 });
+
+

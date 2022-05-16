@@ -9,44 +9,39 @@
               <h6 class="text-uppercase fw-bold mb-4">
                 <i class="fas fa-gem me-3"></i>ViLybrary
               </h6>
-              <p>
-                ViLibrary is a real support for personal development and research, serving the interests of information, study, reading,
-                education and recreation of users.</p>
+              <p>{{ __('about_text1') }}</p>
               </p>
             </div>
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">
-                Pages
+                  {{ __('pages') }}
               </h6>
               <p>
-                <a href="{{ route('home') }}" class="text-reset">Home</a>
+                <a href="{{ route('home') }}" class="text-reset">{{ __('home') }}</a>
               </p>
               <p>
-                <a href="{{ route('about') }}" class="text-reset">About</a>
+                <a href="{{ route('about') }}" class="text-reset">{{ __('about') }}</a>
               </p>
               <p>
-                <a href="{{ route('contact') }}" class="text-reset">Contact</a>
+                <a href="{{ route('contact') }}" class="text-reset">{{ __('contact') }}</a>
               </p>
               <p>
-                <a href="{{route('books')}}" class="text-reset">Books</a>
+                <a href="{{route('books')}}" class="text-reset">{{ __('books') }}</a>
               </p>
             </div>
 
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">
-                Useful links
+                  {{ __('useful') }}
               </h6>
               <p>
-                <a href="{{ route('login') }}" class="text-reset">Login</a>
+                <a href="{{ route('login') }}" class="text-reset">{{ __('login') }}</a>
               </p>
               <p>
-                <a href="{{ route('register') }}" class="text-reset">Register</a>
+                <a href="{{ route('register') }}" class="text-reset">{{ __('register') }}</a>
               </p>
               <p>
-            </div>
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <img src="https://i0.wp.com/www.cssscript.com/wp-content/uploads/2018/03/Simple-Location-Picker.png?fit=561%2C421&ssl=1" alt="Lamp" width="390" height="290">
             </div>
         </div>
         </div>

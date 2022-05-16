@@ -6,12 +6,10 @@
       <div class="container">
           <div class="row align-items-center ">
               <div class="col-md-7 ">
-                  <h1 class="my-2 fw-bold text-center">Why ViLibrary is important?</h1>
-                  <p>The software helps to manage the entire library operations from maintaining book records to issue a book.
-                    So, it is easier to search for books and find the right materials for students and the librarian.</p>
-                    <p> Here you can always find the relevant information on the available domains for your region.
-                      We strongly recommend creating an account in our library so the system can automatically match the available domain for you.</p>
-                      <a href="{{route('login')}}" class="btn btn-outline-primary p-3 mb-md-5 fw-bold">SIGN IN</a>
+                  <h1 class="my-2 fw-bold text-center">{{ __('title') }}</h1>
+                  <p>{{ __('p1') }}</p>
+                    <p>{{ __('p2') }}</p>
+                      <a href="{{route('login')}}" class="btn btn-outline-primary p-3 mb-md-5 fw-bold">{{ __('sign') }}</a>
                 </div>
               <div class="col-md-4 pt-5 rounded float-end align-content-right img-fluid mt-5 pl-5" >
                 <img  class="img1"  src="{{asset('./assets/img/book4.jpg')}}"  alt="header img">
@@ -28,7 +26,7 @@
       320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
   </div>
   <section class="companies">
-    <h3 class="my-2 fw-bold text-center mb-5">Partnerships</h3>
+    <h3 class="my-2 fw-bold text-center mb-5">{{ __('partnership') }}</h3>
     <div class="container text-center">
       <div class="row g-5">
         <div class="col-md-2"><img src="{{asset('./assets/img/1.png')}}" alt="Company logo" class="img-fluid"></div>
@@ -70,12 +68,11 @@
             </div>
           </div>
         </div>
-        <div class="about-index col shadow-sm ">
-          <h1 class="my-2 ali mx-lg-4 fw-bold text-center">About</h1>
-          <p id="about"  class="my-4">ViLibrary is a real support for personal development and research, serving the interests of information, study, reading, education and recreation of users.</p>
-          <p>The mission of the library is to perform informational and educational functions by continuously updating collections of documents in print and electronic format, providing complex services and products,
-            facilitating access to documentary resources, deepening the culture of information of users.</p>
-            <a href="{{route('about')}}" class="btn btn-outline-secondary btn-lg"> More...</a>
+        <div class="about-index col shadow-sm pb-1">
+          <h1 class="ali mx-lg-4 fw-bold text-center">{{ __('about') }}</h1>
+          <p id="about"  class="my-4">{{ __('about_text1') }}</p>
+          <p>{{ __('about_text2') }}</p>
+            <a href="{{route('about')}}" class="btn btn-outline-secondary btn"> {{ __('more') }}...</a>
         </div>
 
       </div>
@@ -89,7 +86,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-            <h2 class="text-center fw-bold mt-5 mb-5">Contact</h2>
+            <h2 class="text-center fw-bold mt-5 mb-5">{{ __('contact') }}</h2>
             </div>
         </div>
             <div class="row">
