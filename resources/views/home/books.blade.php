@@ -5,9 +5,9 @@
       <div class="container pt-5 mt-5">
         <div class="row">
           <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <a href="news.html" class="btn button-blog btn-outline-light fw-bold ">News</a>
+            <a href="news.html" class="btn button-blog btn-outline-light fw-bold "></a>
             <a href="{{route('blog')}}" class="btn button-blog btn-outline-light fw-bold ">Blog</a>
-            <a href="{{route('useful_advice')}}" class="btn button-blog btn-outline-light fw-bold ">Useful Advice</a></div>
+            <a href="{{route('useful_advice')}}" class="btn button-blog btn-outline-light fw-bold "></a></div>
           <div class="col-md-3 mt-5">
               <form>
 

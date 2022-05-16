@@ -18,9 +18,9 @@ body{
 
 }
 
-.page-header{
+.page-header p {
     margin-top: 4rem;
-    font-size: 1.95rem;
+    font-size: 1rem;
     color: white;
 }
 

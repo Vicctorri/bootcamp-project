@@ -6,18 +6,30 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item  @if(\Request::is('/home*') ) active  @endif">
-              <a class="nav-link " aria-current="page" href="{{route('home')}}">Home</a>
+              <a class="nav-link " aria-current="page" href="{{route('home')}}">{{ __('home') }}</a>
             </li>
             <li class="nav-item {{ Request::is('about') ? 'active':'' }}">
-              <a class="nav-link" href="{{ route('about')}}">About</a>
+              <a class="nav-link" href="{{ route('about')}}">{{ __('about') }}</a>
             </li>
             <li class="nav-item {{ request()->routeIs('/contact') ? 'active' : '' }}">
-              <a class="nav-link" href="{{route('contact')}}">Contact</a>
+              <a class="nav-link" href="{{route('contact')}}">{{ __('contact') }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="{{route('books')}}">Books</a>
+              <a class="nav-link " href="{{route('books')}}">{{ __('books') }}</a>
             </li>
           </ul>
+            <div class="lang-menu" style="padding-top: 40px;">
+                <div class="selected-lang changeLang" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>EN
+                </div>
+                <ul>
+                    <li>
+                        <a {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>FR</a>
+                    </li>
+                    <li>
+                        <a {{ session()->get('locale') == 'ro' ? 'selected' : '' }}>RO</a>
+                    </li>
+                </ul>
+            </div>
         </div>
           @guest
 {{--              @if (Route::has('login'))--}}
@@ -54,3 +66,5 @@
       </div>
     </nav>
   </header>
+
+
