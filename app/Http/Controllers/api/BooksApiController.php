@@ -34,6 +34,7 @@ class BooksApiController extends BaseController
             'volume' => 'integer',
             'description' => 'string',
             'image' => 'required', 'file', 'filled', 'mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'file' => 'required', 'file', 'filled', 'csv,txt,xlx,xls,pdf|max:2048',
         ]);
 
         if ($validator->fails()) {
@@ -46,6 +47,12 @@ class BooksApiController extends BaseController
         $destinationPath = public_path('/images');
         $image->move($destinationPath, $name);
 
+        $file = $request->file('file');
+        $fileName = $file->getClientOriginalName();
+
+        $fileDestinationPath = public_path('/files');
+        $file->move($fileDestinationPath, $fileName);
+
         $book = new Book([
             'category_id' => $request->get('category_id'),
             'title' => $request->get('title'),
@@ -53,7 +60,8 @@ class BooksApiController extends BaseController
             'edition' => $request->get('edition'),
             'volume' => $request->get('volume'),
             'description' => $request->get('description'),
-            'image' => $name
+            'image' => $name,
+            'file' => $fileName
         ]);
 
         $book->save();

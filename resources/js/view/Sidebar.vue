@@ -21,11 +21,11 @@
             </el-menu-item>
         </el-menu>
         <div>
-            <el-button>
-                <a href="/">
+            <a href="/">
+                <el-button>
                     View site
-                </a>
-            </el-button>
+                </el-button>
+            </a>
         </div>
     </div>
 </template>
@@ -49,12 +49,39 @@ export default {
 
     .el-menu-vertical-demo {
         border-right: 0;
+        padding-left: 0!important;
     }
 
     a {
         text-decoration: none;
         padding: 0;
         color: $--color-text;
+    }
+
+    .el-button,
+    .el-menu-item {
+        background-color: transparent!important;
+        border: 1px solid #fff;
+        height: 40px;
+        margin: 5px 0;
+        border-radius: 5px;
+        display: flex!important;
+        align-items: center!important;
+
+        &:hover {
+            border-color: $--color-text;
+
+            a,
+            span {
+                color: $--color-text!important;
+            }
+        }
+    }
+
+    .el-button {
+        color: #fff;
+        padding: 20px 10px;
+        font-size: 16px;
     }
 }
 </style>

@@ -16,7 +16,8 @@ class Book extends Model
         'edition',
         'volume',
         'description',
-        'image'
+        'image',
+        'file',
     ];
 
     public $timestamps = false;

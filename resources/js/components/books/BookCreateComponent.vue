@@ -4,19 +4,6 @@
 
         <el-dialog title="Add book" :visible.sync="dialogFormVisible" width="500px">
             <el-form :model="form" :rules="rules" ref="bookForm">
-                <el-form-item label="Image">
-                    <el-upload
-                        action=""
-                        :http-request="handleSuccess"
-                        list-type="image"
-                        :auto-upload="false"
-                        :on-remove="deleteAttachment"
-                        :file-list="formData.files"
-                        :on-change="photoChanged"
-                    >
-                        <el-button size="mini" type="primary">Add file</el-button>
-                    </el-upload>
-                </el-form-item>
                 <el-form-item label="Title" prop="title">
                     <el-input v-model="form.title" autocomplete="off"></el-input>
                 </el-form-item>
@@ -41,6 +28,28 @@
                             :value="category.id"
                         ></el-option>
                     </el-select>
+                </el-form-item>
+                <el-form-item label="Image">
+                    <el-upload
+                        action=""
+                        list-type="picture"
+                        :auto-upload="false"
+                        :file-list="formData.files"
+                        :on-change="photoChanged"
+                    >
+                        <el-button size="mini" type="primary">Add image</el-button>
+                    </el-upload>
+                </el-form-item>
+                <el-form-item label="Book PDF">
+                    <el-upload
+                        action=""
+                        list-type="file"
+                        :auto-upload="false"
+                        :file-list="formData.files"
+                        :on-change="bookChanged"
+                    >
+                        <el-button size="mini" type="primary">Add file</el-button>
+                    </el-upload>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
@@ -69,7 +78,8 @@ export default {
                 volume: '',
                 edition: '',
                 category_id: '',
-                image: ''
+                image: '',
+                file: ''
             },
             rules: {
                 title: [
@@ -107,6 +117,7 @@ export default {
                     formData.append('edition', this.form.edition);
                     formData.append('category_id', this.form.category_id);
                     formData.append('image', this.form.image);
+                    formData.append('file', this.form.file);
 
                     this.$store.dispatch('book/createBook', formData).then(() => {
                         this.dialogFormVisible = false;
@@ -128,20 +139,10 @@ export default {
         },
         photoChanged(file){
             this.form.image = file.raw;  // add photo to form when it's selected
-            this.$message({
-                message: 'Image uploaded successful!',
-                type: 'success'
-            });
         },
-        handleSuccess(file) {
-            console.log(file);
+        bookChanged(file) {
+          this.form.file = file.raw;
         },
-        deleteAttachment(){
-            this.$message({
-                message: 'Image deleted successful!',
-                type: 'success'
-            });
-        }
     }
 }
 </script>
