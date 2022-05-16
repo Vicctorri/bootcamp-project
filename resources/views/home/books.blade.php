@@ -116,7 +116,7 @@
                     @foreach($books as $book)
                         <div class="col-4">
                             <div class="book-card">
-                                <img  src="{{ asset('./assets/img').'/'.$book->image }}" class="card-img-top mx-4" alt="{{ $book->title }}">
+                                <img  src="{{ asset('./images').'/'.$book->image }}" class="card-img-top mx-4" alt="{{ $book->title }}">
                                 <div class="card-body">
                                     <h4 class="card-title">{{$book->title}}</h4>
                                     <p class="card-text">{{$book->author}}</p>

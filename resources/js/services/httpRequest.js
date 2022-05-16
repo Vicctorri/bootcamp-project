@@ -4,7 +4,7 @@ const httpRequest = axios.create({
     baseURL: 'http://localhost:88/api/',
     headers: {
         Accept: "application/json;charset=UTF-8",
-        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Type": "multipart/form-data;application/json;charset=UTF-8;",
     },
     timeout: 0,
 });
